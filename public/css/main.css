@@ -1,0 +1,244 @@
+:root {
+    --main-color:#e6e6e6;
+    --border:rgb(35, 221, 235);
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.ev_share_container {
+    background-color: #fff;
+    width: 600px;
+    min-height: 150px;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+.inner_container {
+    margin: 30px;
+    border: 3px dotted #ff6e6e;
+    width: calc(100%-15px);
+    border-radius: 20px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+
+ .image_wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    transition: all 0.3s ease 0s;
+    margin-top: 30px;
+    right:0;
+    margin: 20px auto auto auto;
+}
+.dragged {
+    background-color: #ff4848;
+    transition: all 0.3s ease-in-out 0s;
+}
+.dragged img.left {
+    transform: rotate(-20deg) translateX(-20px) scale(.8);
+    transform-origin: bottom;
+}
+.dragged img.right {
+    transform: rotate(20deg) translateX(20px) scale(.8);
+    transform-origin: bottom;
+}
+.text-container p {
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+.text-container p span{
+   color: #ff6e6e;
+   cursor: pointer;
+}
+input#inputfile {
+    display: none;
+}
+.copy_link {
+    width: 90%;
+    position: relative;
+    margin: 0px auto;
+}
+input#copy_text {
+    border: 3px dotted #ff6e6e;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    outline: 0;
+}
+.copy_link img {
+    width: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.copy_link img {
+    height: 35px;
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.text_copied {
+    width: auto;
+    height: auto;
+    background: var(--border);
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    transition: all 0.3s ease 0s;
+    transform: translateY(0px);
+    opacity: 0;
+}
+.text_copied.active {
+    transform: translateY(-100px);
+    opacity: 1;
+}
+.upload_bar {
+    width: 90%;
+    margin-bottom: 30px !important;
+    height: 50px;
+    box-shadow: 5px 5px 5px #ccc;
+    border-radius: 30px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    margin-top: 30px !important;
+    position: relative;
+    border: 2px dotted #ff6e6e;
+    overflow: hidden;
+    margin: 0px auto;
+    display: none;
+}
+
+.upload_bar .inner_upload_bar {
+    background: #ff6e6e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 50px;
+    width: 0%;
+    transition: all 0.3s ease;
+}
+.inner_upload_bar p {
+    padding: 4px 20px;
+    margin: 0;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+    font-weight: bold;
+}
+span.mini_bar {
+    display: block;
+    height: 3px;
+    background: #fff;
+    margin-top: 2px;
+    width: 69%;
+    transition: all 0.3s ease;
+}
+.upload_bar p {
+    position: relative;
+    z-index: 99999;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+.email_bar {
+    width: 90%;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid #ff6e6e;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+.email_bar input[type='email'] {
+    border: 0;
+    border-bottom: 2px solid #ff6e6e;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    outline: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.image_wrapper {
+    height: 80px;
+}
+.email_bar input[type="submit"] {
+    border: 0;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background: #ff6e6e;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    outline:0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.bottom_wrapper {
+    display: none;
+}
+.download_Wrapper {
+    padding: 30px;
+    background: #fff;
+    box-shadow: 5px 5px 5px #ccc;
+    border-radius: 40px;
+    text-align: center;
+}
+.download_Wrapper a {
+    background: #ff6e6e;
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.download_Wrapper h1 {
+    color: #ff6e6e;
+    border: 2px dotted;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+img.time {
+    width: 30px;
+    position: relative;
+    top: 9px;
+    margin-right: 10px;
+}

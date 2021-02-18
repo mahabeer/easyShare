@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>easyShare Download File</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <img src="/img/logo.png" class="logo"/>
+    <div class="download_Wrapper">
+        <% if(locals.error) { %>
+            <h2><%= locals.error %></h2>
+        <% } else { %>
+            <h1>Your file is ready to download.</h1>
+            <h4><img src="/img/time.png" class="time">Link will expire in 24 Hours</h4>
+            <h2>File Size : <%= parseInt(filesize/1000) %> Kb</h2>
+            <a href="<%= downloadlink %>" id="download">Click here to download</a>
+        <% } %>
+    </div>
+    
+</body>
+</html>

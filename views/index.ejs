@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>easyShare - Simplified your file sharing.</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <img src="/img/logo.png" class="logo"/>
+    <section class="ev_share_container">
+        <div class="inner_container">
+            <div class="image_wrapper">
+                <img src="img/icon-share.png" draggable="false" class="left"/>
+                <img src="img/icon-share.png" draggable="false" class="center"/>
+                <img src="img/icon-share.png" draggable="false" class="right"/>
+            </div>
+
+            <div class="text-container">
+                <p>Please Drag & Drop your file or <span id="browsefile">Browse</span></p>
+                
+            </div>
+
+            <input type="file" name="myfile" id="inputfile"/>
+        </div>
+
+        <div class="upload_bar">
+            <p>
+                <b id="percentage_text"> </b>
+                <span class="mini_bar"></span>
+            </p>
+            <div class="inner_upload_bar">
+                
+            </div>
+        </div>
+
+            <div class="bottom_wrapper">
+
+                <h4 style="text-align:center">Link Expires in 24 Hours</h4>
+                <div class="copy_link">
+                    
+                    <input type="text" id="copy_text" value=""/>
+                    <img src="/img/copy.svg" id="copy_icon"/>
+                </div>
+
+               
+                <h4 style="text-align:center">Or Send Via Email</h4>
+                <div class="email_bar">
+                    <form id="emailform" method="post">
+                        <input type="email" name="sender" placeholder="Enter Your Email"/>
+                        <input type="email" name="receiver" placeholder="Enter Reciever Email"/>
+                        <input type="submit" value="Send"/>
+                    </form>
+                </div>
+            </div>
+            
+
+        <div class="text_copied"></div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
