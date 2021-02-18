@@ -1,6 +1,6 @@
 
-let sendEmailurl="https://easyshare-file-sharing-app.herokuapp.com/api/files/send";
-let uploadUrl="https://easyshare-file-sharing-app.herokuapp.com/api/files/";
+let sendEmailurl="http://localhost:3000/api/files/send";
+let uploadUrl="http://localhost:3000/api/files/";
 
 const dropZone = document.querySelector(".ev_share_container");
 const inputfile = document.querySelector("#inputfile");
